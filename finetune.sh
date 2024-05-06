@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python finetune2_mistral.py \
+python finetuning.py \
     --model_name_or_path="mistralai/Mistral-7B-v0.1" \
     --report_to="none" \
     --dataset_name="TokenBender/code_instructions_122k_alpaca_style" \
