@@ -35,7 +35,7 @@ mpmath==1.3.0
 multidict==6.0.5
 multiprocess==0.70.16
 networkx==3.2.1
-numpy @ file:///home/conda/feedstock_root/build_artifacts/numpy_1694920014183/work/dist/numpy-1.26.0-cp311-cp311-linux_x86_64.whl#sha256=7b731396a94ca030092abedab0dd12ee8e5d9900f4ad9116c7427a88837ab787
+numpy==1.26.0 
 nvidia-cublas-cu12==12.1.3.1
 nvidia-cuda-cupti-cu12==12.1.105
 nvidia-cuda-nvrtc-cu12==12.1.105
@@ -48,7 +48,7 @@ nvidia-cusparse-cu12==12.1.0.106
 nvidia-nccl-cu12==2.19.3
 nvidia-nvjitlink-cu12==12.1.105
 nvidia-nvtx-cu12==12.1.105
-packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1681337016113/work
+packaging==23.1
 pandas==2.2.2
 parso==0.8.4
 peft==0.10.0
