@@ -85,9 +85,9 @@ if __name__ == "__main__":
     ################
     # Dataset
     ################
-    # raw_dataset = load_dataset(args.dataset_name, split="train")
+    raw_dataset = load_dataset(args.dataset_name, split="train")
     # <remove following later: just to load locally from cache fro speed>
-    raw_dataset = Dataset.from_file("/home/deb/.cache/huggingface/datasets/TokenBender___code_instructions_122k_alpaca_style/default/0.0.0/19b59da67914b5fb2e0a5dff937e9917c0cfb7e4/code_instructions_122k_alpaca_style-train.arrow")
+    # raw_dataset = Dataset.from_file("/home/deb/.cache/huggingface/datasets/TokenBender___code_instructions_122k_alpaca_style/default/0.0.0/19b59da67914b5fb2e0a5dff937e9917c0cfb7e4/code_instructions_122k_alpaca_style-train.arrow")
     """
     We'll put each instruction and input pair between [INST] and [/INST] output after that, like this:
     <s>[INST] What is your favorite condiment? [/INST]
