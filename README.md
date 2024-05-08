@@ -51,6 +51,11 @@ Install dependencies:
 pip install -r torch_requirements.txt
 pip install -r requirements.txt
 ```
+Accelerate Config:
+```bash
+accelerate config # will prompt you to define the training configuration
+```
+
 ### Login Hugging Face
 
 ```bash
@@ -64,7 +69,9 @@ Then get your WRITE token from [hugging face token](https://huggingface.co/setti
 ```bash
 export TRL_USE_RICH=1
 ```
-In the file `finetune.sh` replace `"model_name_or_path"`, `"dataset_name"`, and `"output_dir"` with the appropriate values. Note that this script is tested on GPU with at least 32GB of VRAM. You may need to adjust the parameter `"max_seq_length"` if you are training on a GPU(s) with lesser memory. 
+In the file `finetune.sh` replace `"model_name_or_path"`, `"dataset_name"`, and `"output_dir"` with the appropriate values. Note that this script is tested on GPU with at least 32GB of VRAM. You may need to adjust the parameter `"max_seq_length"` if you are training on a GPU(s) with lesser memory. If you want to perform multi-GPU training then just adjust the `"num_processes"` parameter accordingly. 
+
+At the end of the training, it asks you for a prompt, wherte you can type something like "generate python code for fibonacci series using recusrion". Try this out. Note that, to be to be able to generate really good responses you might need to train for `"num_train_epochs=5"` or `max_steps=500`. Though you might ocassionally see some good responses for lesser `"num_train_epochs"` or `"max_steps"`.
 
 ```bash
 ./finetune.sh
