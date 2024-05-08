@@ -197,4 +197,9 @@ if __name__ == "__main__":
     # merged_model.push_to_hub("deb101/mistral_outputs", use_temp_dir=False)
     # tokenizer.push_to_hub("deb101/mistral_outputs", use_temp_dir=False)
 
-
+    ################
+    # Evaluating the Model
+    ################
+    example_query = "code the fibonacci series in python using reccursion"
+    query = input(f"What python code do you want to generate: (example: {example_query}): ")
+    print(get_completion(query=query, model=merged_model, tokenizer=tokenizer))

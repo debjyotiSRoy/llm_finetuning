@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python finetuning.py \
+accelerate launch --mixed_precision=fp16 --num_processes=1 finetuning.py \
     --model_name_or_path="mistralai/Mistral-7B-v0.1" \
     --report_to="none" \
     --dataset_name="TokenBender/code_instructions_122k_alpaca_style" \
@@ -22,5 +22,3 @@ python finetuning.py \
     --optim="paged_adamw_8bit" \
     --save_strategy="epoch" \
     --fp16=True \
-
-
